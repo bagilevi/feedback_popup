@@ -1,0 +1,44 @@
+#feedback_popup
+  font-family: Verdana, sans-serif
+  font-size: 14px
+  position: fixed
+  bottom: 0
+  right: 2em
+  background: #F70
+  padding: 5px
+  border-radius: 0.5em 0.5em 0 0
+
+  h4
+    padding: 0 1em
+    margin: 0em 0
+    text-transform: uppercase
+    text-align: center
+    color: white
+    text-shadow: #000 1px 1px 2px
+    font-size: 23px
+    cursor: pointer
+
+  .content
+    display: none
+    margin: 0.5em
+    text-align: right
+    form
+      display: block
+      width: 100%
+    textarea
+      display: block
+      font-family: Verdana, sans-serif
+      font-size: 14px
+      width: 20em
+      height: 10em
+    input[type=submit]
+      font-size: 16px
+
+  .message
+    display: none
+    text-align: center
+    color: white
+
+  &.open
+    .content
+      display: block

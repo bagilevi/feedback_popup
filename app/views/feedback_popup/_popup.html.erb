@@ -1,0 +1,10 @@
+<div id="feedback_popup">
+  <h4 class="title"><%= t('feedback_popup.title') %></h4>
+  <div class="content">
+    <%= form_for FeedbackPopup::Message.new, :remote => true do |f| %>
+      <%= f.text_area :body %>
+      <%= f.submit t('feedback_popup.send_button') %>
+    <% end %>
+    <div class="message"></div>
+  </div>
+</div>

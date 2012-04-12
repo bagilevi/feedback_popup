@@ -1,0 +1,8 @@
+
+en:
+  feedback_popup:
+    title: "Feedback"
+    send_button: "Send"
+    message_sent: "Thanks!"
+    email:
+      subject: "Feedback received"

@@ -51,6 +51,18 @@ module Dummy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.gmail.com',
+      :port           => '587',
+      :domain         => 'gmail.com',
+      :authentication => :plain,
+      :user_name      => ENV['GMAIL_USERNAME'],
+      :password       => ENV['GMAIL_PASSWORD'],
+      :enable_starttls_auto => true
+    }
+    ActionMailer::Base.delivery_method = :smtp
+    config.action_mailer.raise_delivery_errors = true
   end
 end
 
